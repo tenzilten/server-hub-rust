@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,26 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Rust-themed colors
+				rust: {
+					50: '#fff1e7',
+					100: '#ffdfce',
+					200: '#ffbfa3',
+					300: '#ff9c6e',
+					400: '#ff6d36',
+					500: '#ff4d10', // Main rust color
+					600: '#eb3600',
+					700: '#c32a00',
+					800: '#9b2300',
+					900: '#7d1f00',
+					950: '#470e00',
+				},
+				dark: {
+					100: '#1e1e1e',
+					200: '#191919',
+					300: '#141414',
+					400: '#111111', // Main dark bg
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +95,21 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			},
+			backgroundImage: {
+				'rust-pattern': "url('/rust-pattern.png')",
+				'rust-gradient': 'linear-gradient(to right, #ff4d10, #eb3600)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
