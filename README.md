@@ -71,3 +71,10 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Database setup for cPanel
+
+1. Create a new MySQL database and user from your cPanel dashboard.
+2. Open phpMyAdmin and select the database.
+3. Use the **Import** tab to upload the `schema.sql` file from the project root.
+4. After importing, the `servers` table will be ready to store your data.

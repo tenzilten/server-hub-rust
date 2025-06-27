@@ -41,7 +41,7 @@ const AddServerPage = () => {
     defaultValues: {
       name: '',
       ip: '',
-      port: '28015',
+      port: 28015,
       website: '',
       description: '',
       country: '',
